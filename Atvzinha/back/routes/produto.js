@@ -9,11 +9,12 @@ router.get('/test', ()=>{
 router.get('/products', async (req, res) => {
   const products = await Product.findAll();
   res.json(products);
+  console.log(products);
 });
 
 router.post('/products', async (req, res) => {
   const { title, description, category, price, quantity } = req.body;
-  const newProduct = await Product.create({ id, title, description, category, price, quantity });
+  const newProduct = await Product.create({ title, description, category, price, quantity });
   res.json(newProduct);
 });
 

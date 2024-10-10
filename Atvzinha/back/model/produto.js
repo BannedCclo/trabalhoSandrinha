@@ -1,12 +1,13 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../bd/bd');
+const sequelize = require('../bd/bd'); 
+
 
 const Product = sequelize.define('Product', {
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
   title: {
     type: DataTypes.STRING,
@@ -28,7 +29,6 @@ const Product = sequelize.define('Product', {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  
 });
 
 module.exports = Product;

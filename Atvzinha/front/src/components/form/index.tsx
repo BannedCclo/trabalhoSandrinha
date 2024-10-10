@@ -16,8 +16,19 @@ const Form: React.FC<FormItemProps> = ({ type }) => {
         const quantity = document.querySelectorAll('#inputItem>input')[4].value
         if(title!="" && description!="" && category!="" && price!="" && quantity!="") {
 
-            api.post('test')
-            console.log(title, description, category, price, quantity)
+            // api.post('/products', {
+            //     title: title,
+            //     description: description,
+            //     category: category,
+            //     price: price,
+            //     quantity: quantity,
+            // })
+            try{
+                api.get('/products')
+            } catch(err) {
+                console.log(err)
+            }
+            
         }else{
             alert('Todos os valores devem ser preenchidos!')
         }

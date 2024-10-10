@@ -43,7 +43,7 @@ function App() {
       {showDesc && (
         <Desc description={description} closeDesc={closeDescription}/>
       )}
-      
+      <Form type={1}/>
       
     </>
   )
