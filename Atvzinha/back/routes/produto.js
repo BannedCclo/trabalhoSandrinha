@@ -12,22 +12,22 @@ router.get('/products', async (req, res) => {
 });
 
 router.post('/products', async (req, res) => {
-  const { name, email } = req.body;
-  const newProduct = await Product.create({ name, email });
+  const { title, description, category, price, quantity } = req.body;
+  const newProduct = await Product.create({ id, title, description, category, price, quantity });
   res.json(newProduct);
 });
 
 router.put('/products/:id', async (req, res) => {
   const { id } = req.params;
-  const { name, email } = req.body;
-  await Product.update({ name, email }, { where: { id } });
-  res.json({ message: 'Usuário atualizado com sucesso' });
+  const { title, description, category, price, quantity } = req.body;
+  await Product.update({ title, description, category, price, quantity }, { where: { id } });
+  res.json({ message: 'Produto atualizado com sucesso' });
 });
 
 router.delete('/products/:id', async (req, res) => {
   const { id } = req.params;
   await Product.destroy({ where: { id } });
-  res.json({ message: 'Usuário deletado com sucesso' });
+  res.json({ message: 'Produto deletado com sucesso' });
 });
 
 module.exports =  router;

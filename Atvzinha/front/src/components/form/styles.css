@@ -57,7 +57,7 @@
     transition: .3s;
 }
 
-#submitBtn:hover {
+#btnContainer:hover>#submitBtn {
     background-color: #74df5f;
     top: -7px;
 }
