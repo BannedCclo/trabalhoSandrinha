@@ -2,10 +2,6 @@ const express = require('express');
 const Product = require('../model/produto');
 const router = express.Router();
 
-router.get('/test', ()=>{
-    console.log('requisitou a api aq')
-})
-
 router.get('/products', async (req, res) => {
   const products = await Product.findAll();
   res.json(products);

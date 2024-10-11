@@ -75,6 +75,7 @@
     border-radius: 10px;
     transition: .3s;
     background-color: inherit;
+    cursor: pointer;
 }
 
 #buttons>div>button:hover{

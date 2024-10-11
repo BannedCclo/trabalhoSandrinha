@@ -8,6 +8,29 @@ header {
   border-bottom: 2px solid #f2f2f2;	
 }
 
+#filter{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: #f2f2f2;
+  padding: 10px 300px;
+}
+
+#filter>h1 {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+#filter>select{
+  height: 35px;
+  min-width: 100px;
+  padding-left: 10px;
+  background-color: #424242;
+  outline: none;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px; 
+  color: #f2f2f2;
+}
 
 .button {
   position: relative;
@@ -89,4 +112,21 @@ header {
   gap: 20px;
   padding: 20px;
   margin-top: 30px;
+}
+
+#openChart {
+  background-color: transparent;
+  border-radius: 100px;
+  height: 2rem;
+  width: 100px;
+  margin-right: 20px;
+  font-size: 1rem;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  transition: .3s;
+  cursor: pointer;
+}
+
+#openChart:hover {
+  background-color: #424242;
 }
